@@ -281,8 +281,15 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         .service-card {
@@ -541,8 +548,8 @@
         <nav class="container">
             <div class="logo">ProLevel QA</div>
             <ul class="nav-links">
-                <li><a href="#services">What We Do</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="#services">What We Do</a></li>
                 <li><a href="#contact">Let's Talk</a></li>
             </ul>
         </nav>
@@ -556,7 +563,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Launch Confident. Move Fast. Ship Bug-Free Software.</h1>
-                <p>Stop losing customers to preventable bugs and last-minute surprises. With 10+ years of hands-on manual testing experience, we identify critical issues before launch—not after users find them. Every release is tested with real user scenarios in mind, helping you reduce costly fixes, protect your reputation, and deliver smooth experiences.</p>
+                <p>Stop losing customers to preventable bugs and last-minute surprises. With 10+ years of hands-on manual testing experience, we identify critical issues before launch, not after users find them. Every release is tested with real user scenarios in mind, helping you reduce costly fixes, protect your reputation, and deliver smooth experiences.</p>
                 <a href="https://docs.google.com/forms/d/1WefQirFO7YXj-O5UgRGou5pdCL1heh2VOCYyPLU6URY/viewform" class="cta-button" target="_blank">Get Your Free Quality Assessment</a>
             </div>
         </div>
@@ -628,21 +635,9 @@
                 </div>
                 
                 <div class="feature">
-                    <div class="feature-number">⚡</div>
-                    <h3>Agile Integration</h3>
-                    <p>Work that fits your sprint cycles and delivery timeline, providing fast feedback when your team needs it most.</p>
-                </div>
-                
-                <div class="feature">
                     <div class="feature-number">🎯</div>
                     <h3>UI/UX Quality Review</h3>
                     <p>We evaluate your interface and user flows, providing actionable feedback on design consistency, usability issues, and user experience improvements.</p>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-number">📝</div>
-                    <h3>Developer-Friendly Communication</h3>
-                    <p>Bug reports that developers actually want to read—clear context, steps to reproduce, and suggested severity without the noise.</p>
                 </div>
                 
                 <div class="feature">
@@ -659,6 +654,7 @@
         <div class="container">
             <h2>Let's Protect Your Software Quality Together</h2>
             <p>Reach out to discuss how manual testing can strengthen your next release</p>
+            <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 2rem;">Custom pricing tailored to your needs • Starting at $45/hour</p>
             <a href="https://docs.google.com/forms/d/1WefQirFO7YXj-O5UgRGou5pdCL1heh2VOCYyPLU6URY/viewform" class="cta-button cta-secondary" target="_blank">Get In Touch</a>
         </div>
     </section>
